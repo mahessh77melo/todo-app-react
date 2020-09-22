@@ -1,0 +1,16 @@
+.todo-list {
+	display: flex;
+	flex-direction: column;
+}
+.todo-list .MuiIconButton-root {
+	width: 6rem;
+	height: 6rem;
+	margin: 0 auto;
+}
+.todo-list button svg {
+	font-size: 3rem;
+}
+.survey {
+	text-align: center;
+	margin-top: 3rem;
+}

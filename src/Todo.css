@@ -1,0 +1,27 @@
+.todo {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border: 2px solid grey;
+}
+.todo__toggle {
+	padding: 1rem 2rem;
+	justify-self: flex-end;
+	cursor: pointer;
+}
+.todo div:not(:last-child) {
+	margin-right: 1.5rem;
+}
+.MuiButton-label {
+	font-size: 1.3rem;
+}
+.todo__work {
+	width: 30%;
+}
+.todo__done {
+	justify-self: flex-start;
+}
