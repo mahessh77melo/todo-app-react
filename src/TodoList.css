@@ -9,8 +9,10 @@
 }
 .todo-list button svg {
 	font-size: 3rem;
+	color: rgb(71, 180, 223);
 }
 .survey {
 	text-align: center;
 	margin-top: 3rem;
+	color: rgb(195, 51, 252);
 }
