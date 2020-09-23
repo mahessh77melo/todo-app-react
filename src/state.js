@@ -1,20 +1,10 @@
 import React from "react";
+// getting the local json file to load the data.
+var data = require("./todos.json");
 
-export const state = [
-	{
-		id: 234,
-		work: "Coursera Course completion",
-		done: false,
-	},
-	{
-		id: 235,
-		work: "Duolingo 60 XP",
-		done: false,
-	},
-	{
-		id: 236,
-		work: "React App Initiation",
-		done: true,
-	},
-];
+/* checking if there is any local storage., else load the default data */
+console.log(localStorage.myTodos);
+export const state = localStorage.length
+	? JSON.parse(localStorage.myTodos)
+	: data;
 export const MyContext = React.createContext(state);

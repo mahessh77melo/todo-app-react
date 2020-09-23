@@ -16,8 +16,10 @@ const Todo = (props) => {
 			})
 		);
 	};
+	const orangeBorder = { border: "3px solid orangered" };
+	const greenBorder = { border: "3px solid green" };
 	return (
-		<div className="todo">
+		<div className="todo" style={done ? greenBorder : orangeBorder}>
 			<div className="todo__work">{props.work}</div>
 			<div className="todo__done">
 				{done ? "Done and dusted" : "Yet to be Done"}

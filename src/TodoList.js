@@ -8,6 +8,7 @@ var max = 0;
 
 const TodoList = ({ initValue: initState }) => {
 	// console.log(initValue.state);
+	// console.log(JSON.stringify(initState.state));
 	const [todos, setTodos] = useState(initState.state);
 	const [pending, setPending] = useState(todos.length);
 
@@ -35,6 +36,8 @@ const TodoList = ({ initValue: initState }) => {
 		doneArray = todos.map((task) => (task.done ? 0 : 1));
 		var number = doneArray.reduce((a, b) => a + b, 0);
 		setPending(number);
+		/* everytime the todo list changes, update it in the local storage as json data */
+		localStorage.myTodos = JSON.stringify(todos);
 		console.log(number);
 	}, [todos]);
 
@@ -60,6 +63,8 @@ const TodoList = ({ initValue: initState }) => {
 						? `Number of tasks remaining : ${pending}`
 						: "You are prolly done for the day"}
 				</h2>
+				<br />
+				<h2>{`Finished tasks for today : ${todos.length - pending}`}</h2>
 			</div>
 		</>
 	);
