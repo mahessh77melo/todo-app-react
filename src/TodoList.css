@@ -11,8 +11,31 @@
 	font-size: 3rem;
 	color: rgb(71, 180, 223);
 }
-.survey {
+.survey,
+.quote {
 	text-align: center;
 	margin-top: 3rem;
-	color: rgb(195, 51, 252);
+	width: 50%;
+	color: rgb(128, 1, 179);
+	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.4),
+		0 -1rem 1rem rgba(0, 0, 0, 0.3) inset;
+	padding: 3rem 4rem;
+	background-color: rgba(253, 220, 34, 0.726);
+	border-radius: 5px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 30px;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+.todo-wrap {
+	min-height: 35vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.quote {
+	background-color: aquamarine;
+	margin-bottom: 5rem;
+
+	text-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.4);
 }

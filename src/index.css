@@ -19,4 +19,8 @@ code {
 html {
 	font-size: 10px;
 	box-sizing: inherit;
+	scrollbar-width: none;
+}
+::-webkit-scrollbar {
+	display: none;
 }

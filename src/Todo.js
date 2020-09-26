@@ -8,7 +8,7 @@ const Todo = (props) => {
 		setDone((status) => !status);
 		props.setTodos((prevState) =>
 			prevState.map((todo) => {
-				if (todo.work === props.work) {
+				if (todo.id === props.id) {
 					console.log(todo);
 					todo.done = !todo.done;
 				}
@@ -27,27 +27,24 @@ const Todo = (props) => {
 			<Button
 				onClick={toggleDone}
 				color="primary"
-				variant="contained"
+				variant={done ? "contained" : "outlined"}
 				className="todo__toggle"
 			>
-				Toggle
+				{done ? "Completed" : "Incomplete"}
 			</Button>
 			<Button
 				onClick={(e) => {
 					props.setTodos((prevState) => {
-						prevState.forEach((todo, index) => {
-							if (todo.work === props.work) {
-								prevState.splice(index, 1);
-								console.log(prevState);
-							}
-						});
-						toggleDone();
+						console.log(props.id);
+						prevState = prevState.filter((todo) => todo.id !== props.id);
+						console.log("new-state", prevState);
+						// toggleDone();
 						return prevState;
 					});
 				}}
 				color="secondary"
 				variant="contained"
-				className="todo__toggle"
+				className="todo__delete"
 			>
 				Delete
 			</Button>

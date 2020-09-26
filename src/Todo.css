@@ -3,14 +3,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	font-weight: 500;
+	font-size: 1.8rem;
 	margin: 0 auto;
 	margin-bottom: 3rem;
+	animation: both fade-down 0.5s;
+	transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 	border-radius: 0.7rem;
 	padding: 2rem;
-	box-shadow: 0 -0.75rem 1rem rgba(0, 0, 0, 0.2) inset,
+	box-shadow: 0 -0.75rem 1rem rgba(0, 0, 0, 0.15) inset,
 		0 0.75rem 1rem rgba(255, 255, 255, 0.35) inset,
 		0.75rem 0 1rem rgba(255, 255, 255, 0.35) inset,
-		-0.75rem 0 1.5rem rgba(0, 0, 0, 0.2) inset, 0 1rem 2rem rgba(0, 0, 0, 0.3);
+		-0.75rem 0 1.5rem rgba(0, 0, 0, 0.15) inset, 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 .todo__toggle {
 	padding: 1rem 2rem;
@@ -21,11 +25,38 @@
 	margin-right: 1.5rem;
 }
 .MuiButton-label {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 .todo__work {
 	width: 30%;
 }
 .todo__done {
 	justify-self: flex-start;
+}
+.todo__delete.MuiButtonBase-root {
+	visibility: hidden;
+	width: 0;
+	transform: scale(0.2);
+	opacity: 0;
+	transition: all 0.3s;
+}
+.todo:hover .todo__delete.MuiButtonBase-root {
+	visibility: visible;
+	width: 10rem;
+	transform: scale(1);
+	opacity: 1;
+}
+@keyframes fade-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-3rem);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translateY(-1.5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
