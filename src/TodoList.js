@@ -3,20 +3,14 @@ import AddCircleIcon from "@material-ui/icons/AddCircle";
 import React, { useEffect, useState } from "react";
 
 import Todo from "./Todo";
+import { quotes } from "./state";
 import "./TodoList.css";
 var max = 0;
 
 const TodoList = ({ initValue: initState }) => {
 	// console.log(initValue.state);
 	// console.log(JSON.stringify(initState.state));
-	const quotes = [
-		"Learn all the rules, So you can break them like an Artist.",
-		"Use the talents you possess, for the woods would be very silent if no birds sang except the best.",
-		"It's about damn time",
-		"Dream as if you'll live forever, Live as if you'll die today.",
-		"If you decide to compete, you are probably gonna lose.",
-		"The man above won't put you in a situation that you can handle. Instead of saying 'Why me?', I said 'This is what he wanted me to do!'.",
-	];
+	const quotes = quotes;
 	const [todos, setTodos] = useState(initState.state);
 	const [pending, setPending] = useState(todos.length);
 	const [quote, setQuote] = useState(quotes[0]);
