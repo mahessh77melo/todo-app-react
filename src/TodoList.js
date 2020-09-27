@@ -3,14 +3,14 @@ import AddCircleIcon from "@material-ui/icons/AddCircle";
 import React, { useEffect, useState } from "react";
 
 import Todo from "./Todo";
-import { quotes } from "./state";
+import { expQuotes } from "./state";
 import "./TodoList.css";
 var max = 0;
 
 const TodoList = ({ initValue: initState }) => {
 	// console.log(initValue.state);
 	// console.log(JSON.stringify(initState.state));
-	const quotes = quotes;
+	const quotes = expQuotes;
 	const [todos, setTodos] = useState(initState.state);
 	const [pending, setPending] = useState(todos.length);
 	const [quote, setQuote] = useState(quotes[0]);

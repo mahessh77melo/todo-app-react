@@ -7,7 +7,7 @@ var data = require("./todos.json");
 export const state = localStorage.length
 	? JSON.parse(localStorage.myTodos)
 	: data;
-export const quotes = [
+export const expQuotes = [
 	"Learn all the rules, So you can break them like an Artist.",
 	"Use the talents you possess, for the woods would be very silent if no birds sang except the best.",
 	"It's about damn time",
