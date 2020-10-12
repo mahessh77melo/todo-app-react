@@ -15,5 +15,6 @@ export const expQuotes = [
 	"If you decide to compete, you are probably gonna lose.",
 	"The man above won't put you in a situation that you can handle. Instead of saying 'Why me?', I said 'This is what he wanted me to do!'.",
 	"If we wait for the moment when everything, absolutely everything is ready, we shall never begin.",
+	"You can't change the direction of the wind, but you can adjust your sails to always reach your destination.",
 ];
 export const MyContext = React.createContext(state);
