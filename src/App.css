@@ -1,9 +1,0 @@
-.app {
-	font-size: 1.6rem;
-	min-height: 100vh;
-	background-color: beige;
-}
-.app > h1 {
-	margin-bottom: 7rem;
-	text-align: center;
-}

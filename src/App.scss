@@ -1,0 +1,10 @@
+$colorOne: rgb(233, 233, 181);
+.app {
+	font-size: 1.6rem;
+	min-height: 100vh;
+	background-color: $colorOne;
+	h1 {
+		margin-bottom: 7rem;
+		text-align: center;
+	}
+}

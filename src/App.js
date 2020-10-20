@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./App.css";
+import "./App.scss";
 import Header from "./Header";
 import { MyContext } from "./state";
 import TodoList from "./TodoList";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Todo.css";
+import "./Todo.scss";
 import { Button } from "@material-ui/core";
 
 const Todo = (props) => {

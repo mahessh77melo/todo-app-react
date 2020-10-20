@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import Todo from "./Todo";
 import { expQuotes } from "./state";
-import "./TodoList.css";
+import "./TodoList.scss";
 var max = 0;
 
 const TodoList = ({ initValue: initState }) => {

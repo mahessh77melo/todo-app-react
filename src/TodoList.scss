@@ -1,15 +1,16 @@
 .todo-list {
 	display: flex;
 	flex-direction: column;
-}
-.todo-list .MuiIconButton-root {
-	width: 6rem;
-	height: 6rem;
-	margin: 0 auto;
-}
-.todo-list button svg {
-	font-size: 3rem;
-	color: rgb(71, 180, 223);
+
+	.MuiIconButton-root {
+		width: 6rem;
+		height: 6rem;
+		margin: 0 auto;
+	}
+	button svg {
+		font-size: 3rem;
+		color: rgb(71, 180, 223);
+	}
 }
 .survey,
 .quote {

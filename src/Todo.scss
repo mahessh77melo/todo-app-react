@@ -15,37 +15,38 @@
 		0 0.75rem 1rem rgba(255, 255, 255, 0.35) inset,
 		0.75rem 0 1rem rgba(255, 255, 255, 0.35) inset,
 		-0.75rem 0 1.5rem rgba(0, 0, 0, 0.15) inset, 0 1rem 2rem rgba(0, 0, 0, 0.3);
+	&__toggle {
+		padding: 1rem 2rem;
+		justify-self: flex-end;
+		cursor: pointer;
+	}
+	&__work {
+		width: 30%;
+	}
+	&__done {
+		justify-self: flex-start;
+	}
+	&__delete.MuiButtonBase-root {
+		visibility: hidden;
+		width: 0;
+		transform: scale(0.2);
+		opacity: 0;
+		transition: all 0.3s;
+	}
+	&:hover &__delete.MuiButtonBase-root {
+		visibility: visible;
+		width: 10rem;
+		transform: scale(1);
+		opacity: 1;
+	}
+	div:not(:last-child) {
+		margin-right: 1.5rem;
+	}
+	.MuiButton-label {
+		font-size: 1.4rem;
+	}
 }
-.todo__toggle {
-	padding: 1rem 2rem;
-	justify-self: flex-end;
-	cursor: pointer;
-}
-.todo div:not(:last-child) {
-	margin-right: 1.5rem;
-}
-.MuiButton-label {
-	font-size: 1.4rem;
-}
-.todo__work {
-	width: 30%;
-}
-.todo__done {
-	justify-self: flex-start;
-}
-.todo__delete.MuiButtonBase-root {
-	visibility: hidden;
-	width: 0;
-	transform: scale(0.2);
-	opacity: 0;
-	transition: all 0.3s;
-}
-.todo:hover .todo__delete.MuiButtonBase-root {
-	visibility: visible;
-	width: 10rem;
-	transform: scale(1);
-	opacity: 1;
-}
+
 @keyframes fade-down {
 	0% {
 		opacity: 0;
