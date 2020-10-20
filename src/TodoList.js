@@ -23,7 +23,7 @@ const TodoList = ({ initValue: initState }) => {
 			document.querySelector(".survey").style.display = "inline-block";
 		}
 		setQuote(quotes[pending % quotes.length]);
-	}, [pending, todos.length]);
+	}, [pending, todos.length, quotes]);
 
 	const addTodo = () => {
 		max += 1;
