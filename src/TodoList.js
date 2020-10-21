@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 import { expQuotes } from "./state";
 import "./TodoList.scss";
+import useLogger from "./useLogger";
 var max = 0;
 
 const TodoList = ({ initValue: initState }) => {
@@ -14,6 +15,7 @@ const TodoList = ({ initValue: initState }) => {
 	const [todos, setTodos] = useState(initState.state);
 	const [pending, setPending] = useState(todos.length);
 	const [quote, setQuote] = useState(quotes[0]);
+	useLogger(todos);
 
 	window.t = todos;
 	useEffect(() => {
