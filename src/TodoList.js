@@ -6,16 +6,18 @@ import Todo from "./Todo";
 import { expQuotes } from "./state";
 import "./TodoList.scss";
 import useLogger from "./useLogger";
+import useLocalStorage from "./useLocalStorage";
 var max = 0;
 
 const TodoList = ({ initValue: initState }) => {
 	// console.log(initValue.state);
 	// console.log(JSON.stringify(initState.state));
+	console.log("🔥,👑");
 	const quotes = expQuotes;
-	const [todos, setTodos] = useState(initState.state);
+	const [todos, setTodos] = useLocalStorage("myTodos");
 	const [pending, setPending] = useState(todos.length);
 	const [quote, setQuote] = useState(quotes[0]);
-	useLogger(todos);
+	useLogger(todos, "myTodos");
 
 	window.t = todos;
 	useEffect(() => {
@@ -28,19 +30,20 @@ const TodoList = ({ initValue: initState }) => {
 	}, [pending, todos.length, quotes]);
 
 	const addTodo = () => {
-		max += 1;
+		todos.forEach((todo) => {
+			if (todo.id > max) max = todo.id;
+		});
 		var input = prompt("Enter the new work");
 		if (input) {
 			setTodos((old) => [
 				...old,
 				{
-					id: max,
+					id: max + 1,
 					work: input,
 					done: false,
 				},
 			]);
 		}
-
 		console.log(todos);
 	};
 
@@ -49,8 +52,6 @@ const TodoList = ({ initValue: initState }) => {
 		doneArray = todos.map((task) => (task.done ? 0 : 1));
 		var number = doneArray.reduce((a, b) => a + b, 0);
 		setPending(number);
-		/* everytime the todo list changes, update it in the local storage as json data */
-		localStorage.myTodos = JSON.stringify(todos);
 		// console.log(number);
 	}, [todos]);
 

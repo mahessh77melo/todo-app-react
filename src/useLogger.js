@@ -3,7 +3,7 @@ const { useEffect } = require("react");
 const useLogger = (props) => {
 	useEffect(() => {
 		console.log(props);
-		localStorage.mytodos = JSON.stringify(props);
+		localStorage.myTodos = JSON.stringify(props);
 	}, [props]);
 };
 export default useLogger;
